@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var cdTextView: UITextView!
     
+    @IBOutlet weak var cdLabel: UILabel!
+    
     //運用陣列
     let cdImages = ["∞無限","夢想成真","PRO"]
     let cdTextViews = ["不同一般的嘻哈敘事手法，《∞無限》以人工智慧題材創造全新格局，以「人格特化療程」的科幻概念貫穿專輯首尾，用詼諧幽默的語調抒發熊仔的敏銳觀察與想像力。","《夢想成真Sisyphus’Dream》如同薛西弗斯推巨石上山的夢，帶領大家「身入其境」，經歷一位不得志地下饒舌歌手，在夢想成真過程中的一切喜怒哀樂：讓專輯的歌曲不只是單獨存在的歌曲，內涵更為具體、深刻。","《PRO》，將以熊仔最擅長的黑色幽默，直白地向大眾拋出疑問，光鮮亮麗的職業背後，如何面對挫折與職業倦怠？熊仔和我們也還在思考，也或許這個問題至始至終都無法解答，那就來聽聽熊仔在《PRO》中的苦笑人生觀。"]
@@ -36,6 +38,7 @@ class ViewController: UIViewController {
         cdTextView.text = cdTextViews[selectNumber]
         cdPageControl.currentPage = selectNumber
         cdSegmentedControl.selectedSegmentIndex = selectNumber
+        cdLabel.text = "\(selectNumber + 1) / 3"
     }
     
     
@@ -70,9 +73,25 @@ class ViewController: UIViewController {
     }
     
     
+    @IBAction func showNextPage(_ sender: Any) {
+        if selectNumber == cdImages.count-1 {
+            selectNumber = 0
+        }else{
+            selectNumber += 1
+        }
+        syncChange()
+    }
     
     
-
+    @IBAction func showPrevPage(_ sender: Any) {
+        if selectNumber == 0 {
+            selectNumber = cdImages.count-1
+        }else{
+            selectNumber -= 1
+        }
+        syncChange()
+    }
+    
 }
 
 //不同一般的嘻哈敘事手法，《∞ 無限》以人工智慧題材創造全新格局，以「人格特化療程」的科幻概念貫穿專輯首尾，用詼諧幽默的語調抒發熊仔的敏銳觀察與想像力。
