@@ -56,7 +56,7 @@
                                     <action selector="nextPage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yej-bB-lnc"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="不同一般的嘻哈敘事手法，《∞ 無限》以人工智慧題材創造全新格局，以「人格特化療程」的科幻概念貫穿專輯首尾，用詼諧幽默的語調抒發熊仔的敏銳觀察與想像力。" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ose-U7-AIc">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="不同一般的嘻哈敘事手法，《∞ 無限》以人工智慧題材創造全新格局，以「人格特化療程」的科幻概念貫穿專輯首尾，用詼諧幽默的語調抒發熊仔的敏銳觀察與想像力。" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ose-U7-AIc">
                                 <rect key="frame" x="65" y="612" width="284" height="219"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
